@@ -8,7 +8,7 @@ var debug = require('gulp-debug');
 gulp.task('copy_files', function() {
     gulp
         .src([
-            './www_source/index.html',
+            './www_source/*.*',
         ])
         .pipe(debug())
         .pipe(gulp.dest('./app/src/main/assets/www/'))
@@ -16,6 +16,16 @@ gulp.task('copy_files', function() {
             console.error('' + error);
         });
 
+    gulp
+        .src([
+            './www_source/index.html',
+        ])
+        .pipe(debug())
+        .pipe(gulp.dest('./app/src/main/assets/www/'))
+        .on('error', function (error) {
+            console.error('' + error);
+        });
+		
     gulp
         .src([
             './www_source/js/webix/codebase/webix.js',

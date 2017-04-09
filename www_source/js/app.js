@@ -936,7 +936,12 @@ class App {
         }
     }
 
-    onBackClick() {
+    onBackClick(event) {
+        if(event) {
+            event.stopPropagation();
+            event.preventDefault();
+        }
+
         $$("main-content").back();
     }
 
