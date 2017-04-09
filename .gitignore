@@ -41,9 +41,9 @@ captures/
 # Keystore files
 *.jks
 
+# Node.js modules
+/node_modules
+
 # Other
 /local.properties
 .DS_Store
-
-# Node.js modules
-/node_modules
