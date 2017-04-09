@@ -47,3 +47,4 @@ captures/
 # Other
 /local.properties
 .DS_Store
+/app/src/main/assets/www
